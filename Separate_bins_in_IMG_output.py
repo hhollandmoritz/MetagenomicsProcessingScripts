@@ -1,4 +1,4 @@
-#!/usr/bin/env python -u
+#!/usr/bin/python -u
 
 __author__ = "Hannah Holland-Moritz"
 __email__ = "hannah.hollandmoritz@colorado.edu"
