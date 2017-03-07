@@ -210,7 +210,8 @@ def read_and_write_non_fasta(read_fp, write_fp, contig_list):
         for j in input_dict.keys():
             if i in j and len(input_dict[j]) > 0:
                 output_line = j + "\t" + input_dict[j]
-                output_file.write(output_line + os.linesep)
+                output_file.write(output_line)
+                output_file.write("\n")
                 count = count + 1
     # close files
     output_file.close()
