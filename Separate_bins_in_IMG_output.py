@@ -182,10 +182,11 @@ def read_and_write_fasta(read_fp, write_fp, contig_list):
     # If contig has an associated fasta header, write it to the file
     count = 0
     for i in contig_list:
-        if i in record_ids:
-            new_fasta = fasta_dict[i].format("fasta")
-            output_file.write(new_fasta)            
-            count = count + 1            
+        for j in record_ids:
+            if i in j:       
+                new_fasta = fasta_dict[j].format("fasta")
+                output_file.write(new_fasta)            
+                count = count + 1            
     output_file.close()
     input_file.close()
     
